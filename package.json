@@ -1,0 +1,56 @@
+{
+  "name": "@joelincc/tw-roc-date",
+  "version": "0.1.1",
+  "description": "民國日期讀寫：讀各家民國寫法（1151106、115/11/06、115年11月6日、民國前）、寫申報格式（115、11510、1151106）、台北的今天、月份加減不溢出月底。Parse and format ROC (Minguo) dates for Taiwan.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "test": "node --test --experimental-strip-types tests/*.test.ts && node .public-gate/clean-scan.mjs",
+    "prepublishOnly": "npm test && npm run build",
+    "clean-scan": "node .public-gate/clean-scan.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "taiwan",
+    "roc-date",
+    "minguo",
+    "roc-calendar",
+    "timezone",
+    "asia-taipei",
+    "民國",
+    "民國年",
+    "西元",
+    "申報"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joepspsps2/tw-roc-date.git"
+  },
+  "homepage": "https://github.com/joepspsps2/tw-roc-date#readme",
+  "bugs": "https://github.com/joepspsps2/tw-roc-date/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "5.9.3"
+  }
+}
