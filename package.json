@@ -1,6 +1,6 @@
 {
   "name": "@joelincc/tw-roc-date",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "民國日期讀寫：讀各家民國寫法（1151106、115/11/06、115年11月6日、民國前）、寫申報格式（115、11510、1151106）、台北的今天、月份加減不溢出月底。Parse and format ROC (Minguo) dates for Taiwan.",
   "type": "module",
   "exports": {
